@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <title>Etch-A-Sketch</title>
+</head>
+<body>
+    <h1 class="title">Mouse-Over-Sketchpad</h1>
+
+    <div id="size-selector">
+        <h2>Select the Tile Size</h2>
+        <input type="range" name="Tile Size" id="slider" max="100" min="4" value="10" onChange="rangeSlide(this.value)">
+        <span id="range-value">10</span>
+    </div>
+    <div class="sketchpad-container">
+        <div class="sketchpad"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
