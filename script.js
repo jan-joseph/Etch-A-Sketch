@@ -1,34 +1,34 @@
-function rangeSlide(e) {
+const sketchpad = document.querySelector('.sketchpad');
+const slider = document.querySelector('#slider')
+const clearBtn = document.querySelector('.clearBtn')
 
+// Generates an n x n grid based on the value from Slider. Autmatically updates when the slider value Changes
+function gridPixelCreator(e) {
     document.getElementById('range-value').innerHTML = e;
-    // const div = document.createElement('div');
     let gridSize = e*e;
     while (sketchpad.firstChild) {
         sketchpad.firstChild.remove()
     }
-    console.log(gridSize);
+    // console.log(gridSize);
     for ( let i = 0; i < gridSize ; i++){
         const div = document.createElement('div');
-        console.log(i);
-        // div.id = `div-${i}`;
-        // div.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
         sketchpad.insertAdjacentElement('beforeend',div);
-        console.log(sketchpad);
     }
-
-
-    // sketchpad.style.cssText = 'gridTemplateColumns:grid-template-columns:repeat(`${+e}`,1fr);';
     sketchpad.style.setProperty('grid-template-columns', `repeat(${+e}, 1fr)`);
     sketchpad.style.setProperty('grid-template-rows', `repeat(${+e}, 1fr)`);
-    console.log(sketchpad);
 
     const grid = sketchpad.querySelectorAll('div');
     grid.forEach(gridPixel => gridPixel.addEventListener('mouseover', colorGrid))
 }
 
+// RNG Coloring Function for the Grid Pixel
 function colorGrid() {
-    console.log(this);
     this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
 }
-const sketchpad = document.querySelector('.sketchpad');
-rangeSlide(10);
+// Clear Grid fucntion, when clear Button is clicked.
+function clearGrid() {
+    gridPixelCreator(slider.value);    
+}
+// Initializes the Grid with the default slider value pixel count
+gridPixelCreator(10);
+clearBtn.addEventListener('click',clearGrid);

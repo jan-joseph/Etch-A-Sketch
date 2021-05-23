@@ -15,13 +15,13 @@
 
     <div id="size-selector">
         <h2>Select the Tile Size</h2>
-        <input type="range" name="Tile Size" id="slider" max="100" min="4" value="10" onChange="rangeSlide(this.value)">
+        <input type="range" name="Tile Size" id="slider" max="100" min="4" value="10" onChange="gridPixelCreator(this.value)">
         <span id="range-value">10</span>
     </div>
     <div class="sketchpad-container">
         <div class="sketchpad"></div>
     </div>
-
+    <button class="clearBtn">CLEAR</button>
 
     <script src="script.js"></script>
 </body>

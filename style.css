@@ -14,6 +14,7 @@ body {
 
 .title {
   margin-top: 1rem;
+  color: darkcyan;
 }
 
 #size-selector {
@@ -52,7 +53,6 @@ body {
 .sketchpad-container {
   width: 50vh;
   height: 50vh;
-  /* background: #e6e6e6; */
 }
 .sketchpad {
   margin-top: 1rem;
@@ -61,10 +61,20 @@ body {
   height: 100%;
   box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
 }
-.sketchpad div {
-  z-index: 3;
-  /* cursor: pointer; */
+
+.clearBtn {
+  margin-top: 4rem;
+  width: 120px;
+  height: 3rem;
+  border: none;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+
+  font-family: "Righteous", cursive;
+  color: red;
+  font-size: 1.5rem;
 }
-/* .sketchpad div:hover {
-  background-color: black;
-} */
+.clearBtn:active {
+  box-shadow: inset 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+}
