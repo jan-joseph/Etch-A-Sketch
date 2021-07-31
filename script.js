@@ -31,4 +31,5 @@ function clearGrid() {
 }
 // Initializes the Grid with the default slider value pixel count
 gridPixelCreator(10);
+slider.addEventListener('change', () => gridPixelCreator(slider.value))
 clearBtn.addEventListener('click',clearGrid);
