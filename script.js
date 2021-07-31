@@ -6,10 +6,10 @@ const clearBtn = document.querySelector('.clearBtn')
 function gridPixelCreator(e) {
     document.getElementById('range-value').innerHTML = e;
     let gridSize = e*e;
+    // Clear the Sketchpad after Slider Change
     while (sketchpad.firstChild) {
         sketchpad.firstChild.remove()
     }
-    // console.log(gridSize);
     for ( let i = 0; i < gridSize ; i++){
         const div = document.createElement('div');
         sketchpad.insertAdjacentElement('beforeend',div);
