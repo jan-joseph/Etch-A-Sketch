@@ -10,6 +10,8 @@ body {
   justify-content: center;
 
   font-family: "Righteous", cursive;
+
+  background-color:#f3e7e4;
 }
 
 .title {
@@ -22,7 +24,7 @@ body {
   flex-direction: column;
   align-items: center;
 
-  margin-top: 5rem;
+  margin-top: 1.5rem;
 }
 #size-selector h2 {
   font-family: 2rem;
@@ -47,7 +49,11 @@ body {
 }
 #range-value {
   font-size: 3rem;
-  color: crimson;
+  color: gold;
+  text-shadow: -1px 1px 0 #000,
+				  1px 1px 0 #000,
+				 1px -1px 0 #000,
+				-1px -1px 0 #000;
 }
 
 .sketchpad-container {
@@ -68,13 +74,16 @@ body {
   height: 3rem;
   border: none;
   border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+  background: linear-gradient(145deg, #dbd0cd, #fff7f4);
+  box-shadow:  4px 4px 4px #cac0bd,
+             -4px -4px 4px #ffffff;
 
   font-family: "Righteous", cursive;
-  color: red;
+  color: crimson;
   font-size: 1.5rem;
 }
 .clearBtn:active {
-  box-shadow: inset 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+  background: #f3e7e4;
+  box-shadow:  inset 4px 4px 4px #cac0bd,
+             inset -4px -4px 4px #ffffff;
 }
