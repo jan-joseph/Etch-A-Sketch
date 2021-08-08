@@ -12,7 +12,6 @@ Points to Improve
 1.  Support for Safari
 2.  Styling Refinement
 3.  Multiple Style Options for the Brush
-4.  Slider Value not updating in Real Time
 
 Site
 -----------------------
