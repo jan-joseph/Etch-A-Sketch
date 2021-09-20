@@ -18,7 +18,7 @@ function gridPixelCreator(e) {
     sketchpad.style.setProperty('grid-template-rows', `repeat(${+e}, 1fr)`);
 
     const grid = sketchpad.querySelectorAll('div');
-    grid.forEach(gridPixel => gridPixel.addEventListener('mouseover', colorGrid))
+    grid.forEach(gridPixel => gridPixel.addEventListener('click', colorGrid))
 }
 
 // RNG Coloring Function for the Grid Pixel
