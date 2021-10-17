@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap'); */
 
 * {
   margin: 0;
@@ -14,6 +15,14 @@ body {
   align-items: center;
   justify-content: center;
 
-  /* font-family: "Righteous", cursive; */
+}
 
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
 }

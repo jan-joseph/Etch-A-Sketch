@@ -1,5 +1,4 @@
-// @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
