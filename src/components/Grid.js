@@ -38,7 +38,7 @@ export default function Grid(props) {
     // To run the Pixel Creator After every re-render
     useEffect(() => {
         gridPixelCreator(props.sliderValue)
-    },[])
+    })
 
     
     // RNG Coloring Function for the Grid Pixel

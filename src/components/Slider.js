@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Slider = () => {
+const Slider = ({sliderValue, handleChange}) => {
     const Styles = {
         sliderStyle:{
             WebkitAppearance: "none",
@@ -17,15 +17,16 @@ const Slider = () => {
             <input 
                 className="mt-6 rounded-3xl h-4 w-96 bg-gray-100" 
                 style={Styles.sliderStyle}
+                onChange={handleChange}
                 type="range" name="Tile Size"
                 id="slider" 
                 max="100" min="4" 
-                defaultValue="10" />
+                defaultValue={sliderValue} />
             <p 
                 style={Styles.sliderValueStyle}
                 className="text-6xl text-yellow-500"
                 id="range-value">
-                    10
+                    {sliderValue}
             </p>
         </div>
     )
