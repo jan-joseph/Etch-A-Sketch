@@ -18,11 +18,9 @@ export default function Grid(props) {
 
     function gridPixelCreator(e) {
         const sketchpad = document.getElementById('sketchpad');
-
         // document.getElementById('range-value').innerHTML = e;
         let gridSize = e*e;
         // Clear the Sketchpad after Slider Change
-        console.log(sketchpad);
         while (sketchpad.firstChild) {
             sketchpad.firstChild.remove()
         }
@@ -48,6 +46,10 @@ export default function Grid(props) {
         this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
     }
 
+    const handleClearGrid = () => {
+        gridPixelCreator(props.sliderValue)
+    }
+
     return (
         <div 
             style={Styles.gridContainerStyle}
@@ -59,13 +61,14 @@ export default function Grid(props) {
                 style={Styles.gridStyle}
             >
             </div>
-            {/* <button 
+            <button 
                 style = {Styles.clearBtnStyle}
+                onClick = {handleClearGrid}
                 id = "clearBtn"
                 className = "mt-4 h-12 w-28 border-none rounded-xl text-2xl text-red-700 "
             >
                     Clear
-            </button> */}
+            </button>
         </div>
     )
 }
